@@ -26,7 +26,7 @@ ipcMain.on('videos:added', (event, videos) => {
     });
   });
 
-  Promise.all(promises)
+Promise.all(promises)
     .then((results) => {
       mainWindow.webContents.send('metadata:complete', results);
     });
